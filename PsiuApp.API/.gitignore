@@ -1,0 +1,4 @@
+.vascode
+bin 
+obj
+*.db
