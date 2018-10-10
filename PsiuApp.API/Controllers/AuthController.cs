@@ -45,10 +45,7 @@ namespace PsiuApp.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
-
-            throw new Exception("Computador disse não!");
-
-            var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
+           var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
             if (userFromRepo == null)
                 return Unauthorized();
@@ -78,7 +75,6 @@ namespace PsiuApp.API.Controllers
             {
                 token = tokenHandler.WriteToken(token)
             });
-
         }
 
     }
