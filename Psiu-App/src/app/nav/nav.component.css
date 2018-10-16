@@ -12,3 +12,11 @@ img {
 nav {
     height: 60px;
 }
+
+.image_link {
+    cursor: pointer;
+}
+
+.busca {
+    width: 450px;
+}

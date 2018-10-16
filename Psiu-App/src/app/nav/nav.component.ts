@@ -2,6 +2,7 @@ import { OnInit, Component } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 import { AlertifyService } from '../_services/alertify.service';
 import { Router } from '@angular/router';
+import { User } from '../_models/user';
 
 @Component({
   selector: 'app-nav',
@@ -12,6 +13,7 @@ export class NavComponent implements OnInit {
 
   model: any = {};
   photoUrl: string;
+  user: User;
 
   constructor(
     public authService: AuthService,
@@ -22,6 +24,7 @@ export class NavComponent implements OnInit {
   ngOnInit() {
     this.authService.currentPhotoUrl
       .subscribe(photoUrl => this.photoUrl = photoUrl);
+      this.user = JSON.parse(localStorage.getItem('user'));
   }
 
   login() {
