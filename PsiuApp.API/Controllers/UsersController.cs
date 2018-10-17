@@ -12,6 +12,7 @@ using PsiuApp.API.Models;
 
 namespace PsiuApp.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
