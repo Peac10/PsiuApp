@@ -16,7 +16,7 @@ namespace PsiuApp.API.Data
          Task<Photo> GetMainPhotoFroUser(int userId);
          Task<Like> GetLike(int userId, int recipientId);
          Task<Message> GetMessage(int id);
-         Task<PagedList<Message>> GetMessagesForUser();
+         Task<PagedList<Message>> GetMessagesForUser(MessageParams messageParams);
          Task<IEnumerable<Message>> GetMessageThread(int userId, int recipientId);
 
     }
